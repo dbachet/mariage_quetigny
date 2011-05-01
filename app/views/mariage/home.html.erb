@@ -1,0 +1,65 @@
+<h1>Mariage#home</h1>
+<p>Find me in app/views/mariage/home.html.erb</p>
+
+<table border= 1px solid black>
+  <tr>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>By</th>
+  </tr>
+
+  <% @posts.each do |post| %>
+  	<tr>
+    	<td><%= post.title %></td>
+    	<td><%= post.content %></td>
+    	<td><%= post.username %></td>
+    	<td><%= link_to "Answer",  new_mariage_post_post_answer_url(:post_id => post.id) %></td>
+  	</tr>
+  
+	  	<table border= 1px solid black>
+	  	<tr>
+	    	<th>Answer</th>
+	    	<th>By</th>
+	  	</tr>
+	
+		<% post.post_answers.each do |post_answer| %>
+		  <tr>
+		    <td><%= post_answer.content %></td>
+		    <td><%= post_answer.username %></td>
+		  </tr>
+		<% end %>
+		</table>
+		
+  <% end %>
+</table>
+
+<%= form_for([:mariage, @post]) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

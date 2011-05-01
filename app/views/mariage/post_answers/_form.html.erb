@@ -1,0 +1,28 @@
+<%= form_for([:mariage, @post, @post_answer]) do |f| %>
+  <% if @post_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post_answer.errors.count, "error") %> prohibited this post_answer from being saved:</h2>
+
+      <ul>
+      <% @post_answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :post_id, :value => params[:post_id] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

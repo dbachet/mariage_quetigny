@@ -1,0 +1,34 @@
+<table border= 1px solid black>
+  <tr>
+    <th>Title</th>
+    <th>Comment</th>
+    <th>By</th>
+  </tr>
+
+  
+  	<tr>
+    	<td><%= @post.title %></td>
+    	<td><%= @post.content %></td>
+    	<td><%= @post.username %></td>
+  	</tr>
+  
+	  	<table border= 1px solid black>
+	  	<tr>
+	    	<th>Answer</th>
+	    	<th>By</th>
+	  	</tr>
+	
+		<% @post.post_answers.each do |post_answer| %>
+		  <tr>
+		    <td><%= post_answer.content %></td>
+		    <td><%= post_answer.username %></td>
+		  </tr>
+		<% end %>
+		</table>
+</table>
+
+<h1>New post_answer</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', mariage_home_path %>
