@@ -1,0 +1,130 @@
+html, body{
+	padding : 0;
+	margin : 0;
+	height : 100%;
+	width : 100%
+}
+ 
+body{
+	display : -moz-box;
+	display : -webkit-box;
+	display : box;
+	
+	-moz-box-orient : horizontal;
+	-moz-box-pack : center;
+	
+	-webkit-box-orient : horizontal;
+	-webkit-box-pack : center;
+	
+	box-orient : horizontal;
+	box-pack : center;
+	background : rgba(215, 175, 225, 1);
+}
+ 
+section{
+	display : block;
+}
+ 
+#page{
+	background:url("/images/background_page.png");
+	background-repeat:no-repeat;
+	height : 100%;
+	max-width : 1000px;
+	display : -moz-box;
+	display : -webkit-box;
+	display : box;
+	
+	-moz-box-orient : vertical;
+	-moz-box-flex : 1;
+	
+	-webkit-box-orient : vertical;
+	-webkit-box-flex : 1;
+	
+	box-orient : vertical;
+	box-flex : 1;
+	
+	margin: 3em;
+}
+ 
+header{
+	display : block;
+}
+
+footer{
+	display : block;
+	padding : 10px;
+	margin-top : 20px;
+	
+	-moz-border-radius : 10px 10px 0 0 ;
+	-webkit-border-radius : 10px 10px 0 0 ;
+	border-radius : 10px 10px 0 0 ;
+}
+
+footer p{
+	margin-top : 0;
+}
+
+
+
+#main{
+	
+	display: block
+	min-height: 275px;
+	overflow:auto;
+}
+
+#logo{
+	/* display : inline-block; */
+	float: left;
+	height: 212px;
+	width :268px;
+	background-image:url("/images/background_logo.png");
+	background-repeat:no-repeat;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+nav{
+/* display: inline-block; */
+float: right;
+background-color: rgba(255, 255, 255, 0.3);
+border: 1px solid rgba(0, 153, 204, 0.3);
+text-align : center;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+nav ul li a:visited {
+  color: #09c;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#descriptionLeft{
+	float: left;
+	height: 200px;
+	width: 325px;
+}
+
+#content{
+float: left;
+min-height: 325px;
+width: 675px;
+}

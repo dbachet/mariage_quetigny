@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= t(:website_title) %> | <%= t(@page_title)%></title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+	<head>
+	  	<title><%= t(:website_title) %> | <%= t(@page_title)%></title>
+		<%= render 'layouts/stylesheets' %>
+	 	<%= csrf_meta_tag %>
+	</head>
+	<body>
+		<div id="page">
+			<header>
+				<% logo = image_tag("logo.png", :alt => t("home"), id => "logo") %>
+				<%= link_to logo, mariage_home_path %>
+				<nav class="round">
+					<ul>
+						<li><%= link_to image_tag("PL_flag.png", :border=>0), :locale => 'pl'%></li>
+						<li><%= link_to image_tag("FR_flag.png", :border=>0), :locale => 'fr'%></li>
+						<li><%= link_to t("home"), mariage_home_path %></li>
+						<li><%= link_to t("program"), mariage_program_path %></li>
+						<li><%= link_to t("accomodation"), mariage_accomodation_path %></li>
+						<li><%= link_to t("contact"), mariage_contact_path %></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="main">
+				<div id="descriptionLeft"
+					<h1>eirufhieuhrfiuehr fiuheirfie hrfiuh eiruf i</h1>
+				</div>
+				<div id="content">
+					<%= yield %>
+				</div>
 
-<%= link_to image_tag("PL_flag.png", :border=>0), :locale => 'pl'%>
-<%= link_to image_tag("FR_flag.png", :border=>0), :locale => 'fr'%>
-<%= link_to t("home"), mariage_home_path %>
-<%= link_to t("accomodation"), mariage_accomodation_path %>
-<%= link_to t("program"), mariage_program_path %>
-<%= link_to t("contact"), mariage_contact_path %>
-
-<%= yield %>
-
-</body>
+			</div>
+			
+			
+			
+			<footer>
+			  <nav class="round">
+			    <ul>
+			      <li><%= link_to "Home", mariage_home_path %></li>
+			      <li><%= link_to "Accomodation", mariage_accomodation_path %></li>
+			      <li><%= link_to "Program", mariage_program_path %></li>
+			      <li><%= link_to "Contact", mariage_contact_path %></li>
+			    </ul>
+			    <p>Our wedding website, copyright D&D</p>
+			  </nav>
+			  
+			</footer>
+		</div>
+	</body>
 </html>
