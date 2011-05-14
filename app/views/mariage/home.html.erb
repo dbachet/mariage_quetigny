@@ -1,4 +1,29 @@
-
+<% @posts.each do |post| %>
+<div class="message_with_answers">
+	<div class="message">
+		<div class="title">
+			<strong>Titre du message:</strong> <%= post.title %>
+			<div class="answer_to_message"><%= link_to "Répondre à ce message",  new_mariage_post_post_answer_url(:post_id => post.id) %></div>
+		</div>
+		<div class="message_author">
+			<strong><%= post.username %></strong> a écrit le <%= post.created_at %>
+			<div class="message_tag">Message</div>
+		</div>
+		<div class="message_content"><%= post.content %>
+		</div>
+	</div>
+	<% post.post_answers.each do |post_answer| %>
+	<div class="answer">
+		<div class="answer_author">
+			<strong><%= post_answer.username %></strong> a écrit le <%= post_answer.created_at %>
+			<div class="answer_tag">Réponse</div>
+		</div>
+		<div class="answer_content"><%= post_answer.content %>
+		</div>
+	</div>
+	<% end %>
+</div>
+<% end %>
 <table>
 	<tr>
 		<th>Title</th>
