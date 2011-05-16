@@ -33,9 +33,14 @@
 					<p>eirufhieuhrfiuehr fiuheirfie hrfiuh eiruf i</p>
 				</div>
 				<div id="content" class="round">
+				<% if !notice.nil? %>
+				<div class="notice"><%= notice %></div>
+				<% end %>
+				<% if !alert.nil? %>
+				<div class="alert"><%= alert %></div>
+				<% end %>
 					<%= yield %>
 				</div>
-
 			</div>
 			
 			

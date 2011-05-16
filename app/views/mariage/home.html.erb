@@ -1,15 +1,75 @@
+
+
+<div class="new_message">
+
+	<div class="home">
+		<div class="text_left1">
+			<strong>Vous</strong>
+		</div>
+		<div class="text_left2">
+			êtes sur le site web qui donne toutes les informations sur le super mariage de Dagmara et Damien. Ici, vous avez la possibilité d'écrire un message qui sera affiché ci-dessous. N'hésitez pas, ça fait toujours plaisir !
+		</div>
+		<div class="text_left1">
+			<strong>Merci</strong>
+		</div>
+	</div>	
+
+	
+
+	<%= form_for([:mariage, @post]) do |f| %>
+	<% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  	<% end %>
+	<table>
+		<tbody>
+			<tr><h2>Écrire un nouveau message</h2></tr>
+			<tr>
+				<td>Auteur</td>
+				<td><%= f.text_field :username %></td>
+			</tr>
+			<tr>
+				<td>Titre</td>
+				<td><%= f.text_field :title %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><%= f.text_area :content %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><%= f.submit "Enregistrer le message" %></td>
+			</tr>
+		</tbody>	
+	</table>
+	<% end %>
+</div>
+
+
 <% @posts.each do |post| %>
 <div class="message_with_answers">
 	<div class="message">
-		<div class="title">
-			<strong>Titre du message:</strong> <%= post.title %>
+		<div class="title_bar">
+			<div class="title">
+				<strong>Titre du message:</strong> <%= post.title %>
+			</div>
+			<div class="message_tag">Message</div>
 			<div class="answer_to_message"><%= link_to "Répondre à ce message",  new_mariage_post_post_answer_url(:post_id => post.id) %></div>
 		</div>
-		<div class="message_author">
-			<strong><%= post.username %></strong> a écrit le <%= post.created_at %>
-			<div class="message_tag">Message</div>
-		</div>
-		<div class="message_content"><%= post.content %>
+		<div class="contour_message">
+			<div class="message_author">
+				<strong><%= post.username %></strong> a écrit le <%= post.created_at %>
+				
+			</div>
+			<div class="message_content"><%= post.content %>
+			</div>
 		</div>
 	</div>
 	<% post.post_answers.each do |post_answer| %>
@@ -24,68 +84,3 @@
 	<% end %>
 </div>
 <% end %>
-<table>
-	<tr>
-		<th>Title</th>
-    	<th>Comment</th>
-   		<th>By</th>
-  	</tr>
-  	
-  	<% @posts.each do |post| %>
-	<tr>
-    	<td><%= post.title %></td>
-    	<td><%= post.content %></td>
-    	<td><%= post.username %></td>
-    	<td><%= link_to "Answer",  new_mariage_post_post_answer_url(:post_id => post.id) %></td>
-  	</tr>
-  	<tr>
-  		<td>
-  			<table border= 1px solid black>
-	  			<tr>
-	    			<th>Answer</th>
-	    			<th>By</th>
-	  			</tr>
-	
-				<% post.post_answers.each do |post_answer| %>
-		  		<tr>
-		    		<td><%= post_answer.content %></td>
-		    		<td><%= post_answer.username %></td>
-		  		</tr>
-				<% end %>
-			</table>
-		</td>
-	</tr>
-	<% end %>	
-</table>
-
-
-<%= form_for([:mariage, @post]) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
