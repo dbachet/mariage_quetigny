@@ -65,8 +65,9 @@
 		</div>
 		<div class="contour_message">
 			<div class="message_author">
-				<strong><%= post.username %></strong> a écrit le <%= post.created_at %>
-				
+				<h2><%= post.created_at.strftime("%d") %>.<%= post.created_at.strftime("%m") %></h2>
+				<h2><strong><%= post.created_at.strftime("%Y") %></h2>
+				 by <p><strong><%= post.username %></strong></p>
 			</div>
 			<div class="message_content"><%= post.content %>
 			</div>
@@ -75,7 +76,9 @@
 	<% post.post_answers.each do |post_answer| %>
 	<div class="answer">
 		<div class="answer_author">
-			<strong><%= post_answer.username %></strong> a écrit le <%= post_answer.created_at %>
+			<h2><%= post_answer.created_at.strftime("%d") %>.<%= post_answer.created_at.strftime("%m") %></h2>
+				<h2><strong><%= post_answer.created_at.strftime("%Y") %></h2>
+				 by <p><strong><%= post_answer.username %></strong></p>
 			<div class="answer_tag">Réponse</div>
 		</div>
 		<div class="answer_content"><%= post_answer.content %>

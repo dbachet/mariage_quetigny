@@ -1,3 +1,91 @@
+
+
+<div class="new_message">
+
+	<div class="home">
+		<div class="text_left1">
+			<strong>Vous</strong>
+		</div>
+		<div class="text_left2">
+			êtes sur le site web qui donne toutes les informations sur le super mariage de Dagmara et Damien. Ici, vous avez la possibilité d'écrire un message qui sera affiché ci-dessous. N'hésitez pas, ça fait toujours plaisir !
+		</div>
+		<div class="text_left1">
+			<strong>Merci</strong>
+		</div>
+	</div>	
+
+	
+
+	<%= form_for([:mariage, @post, @post_answer]) do |f| %>
+	<% if @post_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post_answer.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post_answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  	<% end %>
+	<table>
+		<tbody>
+			<tr><h2>Répondre à ce message</h2></tr>
+			<tr>
+				<td>Auteur</td>
+				<td><%= f.text_field :username %></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><%= f.text_area :content %></td>
+			</tr>
+    		<%= f.hidden_field :post_id, :value => params[:post_id] %>
+			<tr>
+				<td></td>
+				<td><%= f.submit "Enregistrer la réponse" %></td>
+			</tr>
+		</tbody>	
+	</table>
+	<% end %>
+</div>
+
+<div class="message_with_answers">
+	<div class="message">
+		<div class="title_bar">
+			<div class="title">
+				<strong>Titre du message:</strong> <%= @post.title %>
+			</div>
+			<div class="message_tag">Message</div>
+			<div class="answer_to_message"><%= link_to "Répondre à ce message",  new_mariage_post_post_answer_url(:post_id => @post.id) %></div>
+		</div>
+		<div class="contour_message">
+			<div class="message_author">
+				<h2><%= @post.created_at.strftime("%d") %>.<%= @post.created_at.strftime("%m") %></h2>
+				<h2><strong><%= @post.created_at.strftime("%Y") %></h2>
+				 by <p><strong><%= @post.username %></strong></p>
+			</div>
+			<div class="message_content"><%= @post.content %>
+			</div>
+		</div>
+	</div>
+	<% @post.post_answers.each do |post_answer| %>
+	<div class="answer">
+		<div class="answer_author">
+			<h2><%= post_answer.created_at.strftime("%d") %>.<%= post_answer.created_at.strftime("%m") %></h2>
+				<h2><strong><%= post_answer.created_at.strftime("%Y") %></h2>
+				 by <p><strong><%= post_answer.username %></strong></p>
+			<div class="answer_tag">Réponse</div>
+		</div>
+		<div class="answer_content"><%= post_answer.content %>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+
+
+
+
 <table border= 1px solid black>
   <tr>
     <th>Title</th>
