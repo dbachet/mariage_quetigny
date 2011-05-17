@@ -18,6 +18,8 @@ scope "(:locale)", :locale => /fr|pl/ do
 end
 
 
+root :to => "mariage#changeons"
+
 #scope "(:locale)", :locale => /fr|pl/ do
 #	scope "mariage" do
 #	match '/mariage' => 'mariage#home'
