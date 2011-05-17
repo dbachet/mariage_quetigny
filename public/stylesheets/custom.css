@@ -180,8 +180,7 @@ nav ul li a:hover {
 	-moz-border-radius:    15px;
   	-webkit-border-radius: 15px;
   	border-radius:         15px;
-	padding: 10px;
-	
+	padding: 7px;
 }
 
 .message_with_answers {
@@ -562,23 +561,23 @@ background : rgba(200, 140, 205, 1);
 
 .new_message {
 //	border: 1px solid rgba(0, 153, 204, 0.3);
-//	display: block;
-	display : -moz-box;
-	display : -webkit-box;
-	display : box;
-	
-	-moz-box-orient : vertical;
-	-moz-box-flex : 1;
-	
-	-webkit-box-orient : vertical;
-	-webkit-box-flex : 1;
-	
-	box-orient : vertical;
-	box-flex : 1;
+	display: block;
+//	display : -moz-box;
+//	display : -webkit-box;
+//	display : box;
+//	
+//	-moz-box-orient : vertical;
+//	-moz-box-flex : 1;
+//	
+//	-webkit-box-orient : vertical;
+//	-webkit-box-flex : 1;
+//	
+//	box-orient : vertical;
+//	box-flex : 1;
 
 	min-height: 175px;
-	width: 638px;
-	padding: 20px;
+//	width: 638px;
+	padding: 5px;
 	-moz-border-radius:    5px;
   	-webkit-border-radius: 5px;
   	border-radius:         5px;

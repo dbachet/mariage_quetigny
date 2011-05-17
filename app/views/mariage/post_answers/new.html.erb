@@ -30,19 +30,19 @@
   	<% end %>
 	<table>
 		<tbody>
-			<tr><h2>Répondre à ce message</h2></tr>
+			<tr><h2><%= t("answer_to_message") %></h2></tr>
 			<tr>
-				<td>Auteur</td>
+				<td><%= t("author") %></td>
 				<td><%= f.text_field :username %></td>
 			</tr>
 			<tr>
-				<td></td>
+				<td><%= t("answer") %></td>
 				<td><%= f.text_area :content %></td>
 			</tr>
     		<%= f.hidden_field :post_id, :value => params[:post_id] %>
 			<tr>
 				<td></td>
-				<td><%= f.submit "Enregistrer la réponse" %></td>
+				<td><%= f.submit t("save_answer") %></td>
 			</tr>
 		</tbody>	
 	</table>
@@ -53,16 +53,17 @@
 	<div class="message">
 		<div class="title_bar">
 			<div class="title">
-				<strong>Titre du message:</strong> <%= @post.title %>
+				<strong><%= t("title_of_message") %></strong> <%= @post.title %>
 			</div>
-			<div class="message_tag">Message</div>
-			<div class="answer_to_message"><%= link_to "Répondre à ce message",  new_mariage_post_post_answer_url(:post_id => @post.id) %></div>
+			<div class="message_tag"><%= t("message") %></div>
+			<div class="answer_to_message"><%= link_to t("answer_to_message"),  new_mariage_post_post_answer_url(:post_id => @post.id) %></div>
 		</div>
 		<div class="contour_message">
 			<div class="message_author">
 				<h2><%= @post.created_at.strftime("%d") %>.<%= @post.created_at.strftime("%m") %></h2>
-				<h2><strong><%= @post.created_at.strftime("%Y") %></h2>
-				 by <p><strong><%= @post.username %></strong></p>
+				<h2><strong><%= @post.created_at.strftime("%Y") %></strong></h2>
+				<%= t("by") %>
+				<p><strong><%= @post.username %></strong></p>
 			</div>
 			<div class="message_content"><%= @post.content %>
 			</div>
@@ -72,51 +73,12 @@
 	<div class="answer">
 		<div class="answer_author">
 			<h2><%= post_answer.created_at.strftime("%d") %>.<%= post_answer.created_at.strftime("%m") %></h2>
-				<h2><strong><%= post_answer.created_at.strftime("%Y") %></h2>
+				<h2><strong><%= post_answer.created_at.strftime("%Y") %></strong></h2>
 				 by <p><strong><%= post_answer.username %></strong></p>
-			<div class="answer_tag">Réponse</div>
+			<div class="answer_tag"><%= t("answer") %></div>
 		</div>
 		<div class="answer_content"><%= post_answer.content %>
 		</div>
 	</div>
 	<% end %>
 </div>
-
-
-
-
-
-<table border= 1px solid black>
-  <tr>
-    <th>Title</th>
-    <th>Comment</th>
-    <th>By</th>
-  </tr>
-
-  
-  	<tr>
-    	<td><%= @post.title %></td>
-    	<td><%= @post.content %></td>
-    	<td><%= @post.username %></td>
-  	</tr>
-  
-	  	<table border= 1px solid black>
-	  	<tr>
-	    	<th>Answer</th>
-	    	<th>By</th>
-	  	</tr>
-	
-		<% @post.post_answers.each do |post_answer| %>
-		  <tr>
-		    <td><%= post_answer.content %></td>
-		    <td><%= post_answer.username %></td>
-		  </tr>
-		<% end %>
-		</table>
-</table>
-
-<h1>New post_answer</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', mariage_home_path %>

@@ -16,6 +16,18 @@ fr:
   contact_title: "Contact - Écrivez-nous !"
   program_title: "Programme"
   hello_flash: "Ah ben vous voilà !"
+  description_left: "Ici, il y aura du texte, mais il est pas encore là..."
+  write_new_message: "Écrire un nouveau message"
+  author: "Auteur"
+  title: "Titre"
+  message: "Message"
+  save_message: "Enregistrer le message"
+  title_of_message: "Titre du message:"
+  answer_to_message: "Répondre à ce message"
+  by: "de"
+  answer: "Réponse"
+  save_answer: "Enregistrer la réponse"
+  
   
   date:
     formats:
