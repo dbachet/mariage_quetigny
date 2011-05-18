@@ -21,7 +21,5 @@ class MariageController < ApplicationController
   def create
   	puts("create from mariage controller")
   end
-  
-  def changeons
-  end
+
 end

@@ -2,6 +2,7 @@ MariageQuetigny::Application.routes.draw do
 
   
   
+
 #resources :mariage
 scope "(:locale)", :locale => /fr|pl/ do
 	namespace :mariage do
@@ -18,7 +19,7 @@ scope "(:locale)", :locale => /fr|pl/ do
 end
 
 
-root :to => "mariage#changeons"
+root :to => "pages#changeons"
 
 #scope "(:locale)", :locale => /fr|pl/ do
 #	scope "mariage" do
