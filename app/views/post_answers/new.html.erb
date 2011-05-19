@@ -16,7 +16,7 @@
 
 	
 
-	<%= form_for([:mariage, @post, @post_answer]) do |f| %>
+	<%= form_for([@post, @post_answer]) do |f| %>
 	<% if @post_answer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post_answer.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -56,7 +56,7 @@
 				<strong><%= t("title_of_message") %></strong> <%= @post.title %>
 			</div>
 			<div class="message_tag"><%= t("message") %></div>
-			<div class="answer_to_message"><%= link_to t("answer_to_message"),  new_mariage_post_post_answer_url(:post_id => @post.id) %></div>
+			<div class="answer_to_message"><%= link_to t("answer_to_message"),  new_post_post_answer_url(:post_id => @post.id) %></div>
 		</div>
 		<div class="contour_message">
 			<div class="message_author">

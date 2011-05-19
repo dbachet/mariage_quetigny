@@ -19,10 +19,11 @@ production:
     adapter: mysql2
     encoding: utf8
     reconnect: false
-    database: changeons_prod
+    database: changeons_test_db
     pool: 5
-    username: proddb_user
-    password: partia26
+    username: changeons_testdb
+    password: dafion
+    host: testdb.changeons.org
   #   socket: /tmp/mysql.sock
   # adapter: sqlite3
   # database: db/production.sqlite3

@@ -1,4 +1,4 @@
-class Mariage::PostAnswersController < ApplicationController
+class PostAnswersController < ApplicationController
   # GET /post_answers
   # GET /post_answers.xml
   def index
@@ -31,9 +31,9 @@ class Mariage::PostAnswersController < ApplicationController
     @post_answer = PostAnswer.new(params[:post_answer])
 
       if @post_answer.save
-        redirect_to(mariage_home_path, :notice => 'Post answer was successfully created.')
+        redirect_to(home_path, :notice => 'Post answer was successfully created.')
       else
-        redirect_to(mariage_home_path, :notice => 'Post answer wasn\'t successfully created.')
+        redirect_to(home_path, :notice => 'Post answer wasn\'t successfully created.')
       end
   end
 

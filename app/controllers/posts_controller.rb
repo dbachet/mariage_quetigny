@@ -1,4 +1,4 @@
-class Mariage::PostsController < ApplicationController
+class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
@@ -30,9 +30,9 @@ class Mariage::PostsController < ApplicationController
     @post = Post.new(params[:post])
 
       if @post.save
-        redirect_to(mariage_home_path, :notice => 'Post was successfully created.')
+        redirect_to(home_path, :notice => 'Post was successfully created.')
       else
-        redirect_to(mariage_home_path, :notice => 'Post wasn\'t successfully created.') 
+        redirect_to(home_path, :notice => 'Post wasn\'t successfully created.') 
       end
   end
 

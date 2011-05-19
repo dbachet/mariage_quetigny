@@ -9,7 +9,7 @@
 		<div id="page">
 			<header>
 				<% logo = image_tag("logo.png", :alt => t("home"), id => "logo") %>
-				<%= link_to logo, mariage_home_path %>
+				<%= link_to logo, home_path %>
 				<div id="flags">
 					<ul>
 						<li><%= link_to image_tag("PL_flag.png", :border=>0), :locale => 'pl'%></li>
@@ -18,13 +18,13 @@
 				</div>
 				<nav class="round">
 					<ul>
-						<li><%= link_to t("home"), mariage_home_path %></li>
+						<li><%= link_to t("home"), home_path %></li>
 						<li>|</li>
-						<li><%= link_to t("program"), mariage_program_path %></li>
+						<li><%= link_to t("program"), program_path %></li>
 						<li>|</li>
-						<li><%= link_to t("accomodation"), mariage_accomodation_path %></li>
+						<li><%= link_to t("accomodation"), accomodation_path %></li>
 						<li>|</li>
-						<li><%= link_to t("contact"), mariage_contact_path %></li>
+						<li><%= link_to t("contact"), contact_path %></li>
 					</ul>
 				</nav>
 			</header>
@@ -48,10 +48,10 @@
 			<footer>
 			  <nav class="round">
 			    <ul>
-			      <li><%= link_to t("home"), mariage_home_path %></li>
-			      <li><%= link_to t("program"), mariage_accomodation_path %></li>
-			      <li><%= link_to t("accomodation"), mariage_program_path %></li>
-			      <li><%= link_to t("contact"), mariage_contact_path %></li>
+			      <li><%= link_to t("home"), home_path %></li>
+			      <li><%= link_to t("program"), accomodation_path %></li>
+			      <li><%= link_to t("accomodation"), program_path %></li>
+			      <li><%= link_to t("contact"), contact_path %></li>
 			    </ul>
 			    <p>Our wedding website, copyright D&D</p>
 			  </nav>

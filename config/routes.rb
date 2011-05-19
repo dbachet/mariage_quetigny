@@ -5,7 +5,7 @@ MariageQuetigny::Application.routes.draw do
 
 #resources :mariage
 scope "(:locale)", :locale => /fr|pl/ do
-	namespace :mariage do
+	scope "/mariage" do
 		match '/' => 'mariage#home', :as => "home"
 		match '/contact' => 'mariage#contact'
 		match '/program' => 'mariage#program'
