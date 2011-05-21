@@ -4,15 +4,26 @@
 
 pl:
   home: "Strona główna"
-  accomodation: "Zakwaterowanie - Gdzie spać?"
-  program: "Plan"
-  contact: "Kontakt - Napisz do nas!"
-  website_title: "W dniu 16 lipca 2011 r., Dagmara i Damien poślubić Quetigny"
+  accomodation: "Zakwaterowanie"
+  program: "Program"
+  contact: "Kontakt"
+  website_title: "W dniu 16 lipca 2011 r., Dagmara i Damien pobierają się w Quetigny"
   home_title: "Strona główna"
   accomodation_title: "Zakwaterowanie - Gdzie spać?"
   contact_title: "Kontakt - Napisz do nas!"
   program_title: "Plan"
-  hello_flash: "No to dobrze, jesteś!"
+  hello_flash: "Nareszcie jesteś!"
+  description_left: "Tu będzie opis, ale narazie go nie ma..."
+  write_new_message: "Napisz nową wiadomość"
+  author: "Autor"
+  title: "Tytuł"
+  message: "Tekst"
+  save_message: "Zapisz wiadomość"
+  title_of_message: "Tytuł wiadomości:"
+  answer_to_message: "Odpowiedz na wiadomość"
+  by: "od"
+  answer: "Odpowiedź"
+  save_answer: "Zapisz odpowiedź"
   
   date:
     formats:
