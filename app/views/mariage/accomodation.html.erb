@@ -1,2 +1,77 @@
-<h1>Page en construction</h1>
-<p>Nous proposons, sur cette page, une liste d'hôtels faciles d'accès depuis la salle de réception. Si vous avez d'autres idées, n'hésitez pas à nous les communiquer pour que l'on puisse les afficher sur cette page.</p>
+
+	<div class="home">
+		<div class="text_left1">
+			<strong><%= t("where") %></strong>
+		</div>
+		<div class="text_left2"><%= t("accomodation_description") %>
+		</div>
+		<div class="text_left1">
+			<strong><%= t("to_sleep") %></strong>
+		</div>
+	</div>	
+<% @hotels.each do |hotel| %>
+<div class="message_with_answers">
+	
+	<div class="message">
+		<div class="title_bar">
+			<div class="title">
+				<%= hotel.name %>
+			</div>
+			<div class="distance_tag">
+				<%= t("distance") %> : <%= number_to_human(hotel.distance_to_la_barca, :units => {:unit => "m", :thousand => "km"}) %>
+			</div>
+			<% if !hotel.double_room_price.nil? %>
+			<div class="price_tag">
+				<%= t("price") %> : <%= number_to_human(hotel.double_room_price, :units => {:unit => "€"}) %>
+			</div>
+			<% end %>
+			
+			
+		</div>
+		<div class="hotel_info">
+			<div class="address_phone">
+				<div class="address">
+					<ul>
+						<li><strong><%= t("address") %> :</strong></li>
+						<li><font color="grey"><%= hotel.address_street %></font></li>
+						<li><font color="grey"><%= hotel.address_post_code %> <%= hotel.address_city %></font></li>
+					</ul>
+				</div>
+				<% if hotel.phone_nr.any? || hotel.fax_nr.any? || hotel.email.any? %>
+				<div class="phone">
+					<ul>
+						<% if hotel.phone_nr.any? %>
+						<li><strong>Tel.: </strong><font color="grey"><%= hotel.phone_nr %></font></li>
+						<% end %>
+						<% if hotel.fax_nr.any? %>
+						<li><strong>Fax: </strong><font color="grey"><%= hotel.fax_nr %></font></li>
+						<% end %>
+						<% if hotel.email.any? %>
+						<li><strong>Email: </strong><font color="grey"><%= mail_to hotel.email %></font></li>
+						<% end %>
+					</ul>
+				</div>
+				<% end %>
+			</div>
+			<% if hotel.website.any? %>
+			<div class="website">
+				<p><strong><%= t("website") %></strong></p> <%= link_to hotel.website %>
+			</div>
+			<% end %>
+			<% if hotel.extra_description.any? %>
+			<div class="extra">
+				<p><strong><%= t("extra_info") %></strong></p><%= hotel.extra_description %>
+			</div>
+			<% end %>
+		</div>
+	</div>
+	
+
+
+</div>
+
+<% end %>
+
+
+
+

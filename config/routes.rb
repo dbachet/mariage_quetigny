@@ -3,6 +3,8 @@ MariageQuetigny::Application.routes.draw do
   
   
 
+  resources :hotels
+
 #resources :mariage
 scope "(:locale)", :locale => /fr|pl/ do
 	scope "/mariage" do

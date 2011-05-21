@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  address_street: MyString
+  address_city: MyString
+  address_post_code: MyString
+  website: MyString
+  email: MyString
+  distance_to_la_barca: 9.99
+  double_room_price: 9.99
+  phone_nr: MyString
+  fax_nr: MyString
+  extra_description: MyString
+
+two:
+  name: MyString
+  address_street: MyString
+  address_city: MyString
+  address_post_code: MyString
+  website: MyString
+  email: MyString
+  distance_to_la_barca: 9.99
+  double_room_price: 9.99
+  phone_nr: MyString
+  fax_nr: MyString
+  extra_description: MyString

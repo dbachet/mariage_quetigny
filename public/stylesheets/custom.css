@@ -74,7 +74,7 @@ footer p{
 	
 	display: block
 	min-height: 275px;
-	overflow:auto;
+//	overflow:auto;
 }
 
 #logo{
@@ -181,7 +181,7 @@ nav ul li a:hover {
 
 #content{
 	float: left;
-	min-height: 325px;
+//	min-height: 325px;
 	width: 678px;
 //	border: 1px solid rgba(0, 153, 204, 0.3);
 //	background-color: rgba(255, 255, 255, 0.3);
@@ -201,7 +201,7 @@ nav ul li a:hover {
   	-webkit-border-radius: 5px;
   	border-radius:         5px;
   	overflow:auto;
-  	margin-bottom: 15px;
+  	margin-bottom: 25px;
 	background-color: rgba(197, 167, 204, 0.5);
 		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
@@ -502,6 +502,34 @@ background : rgba(200, 140, 205, 1);
 	border: 1px solid rgba(0, 153, 204, 0.3);
 }
 
+.distance_tag{
+	-moz-border-radius:    3px;
+  	-webkit-border-radius: 3px;
+  	border-radius:         3px;
+  	float: right;
+  	background : rgb(237, 234, 73);
+	padding: 0 6px;
+	margin-left: 15px;
+	margin-top: 3px;
+//  	color: white;
+	color: rgb(158, 89, 163);
+  	border: 1px solid rgba(140, 45, 140, 0.5);
+}
+
+.price_tag{
+	-moz-border-radius:    3px;
+  	-webkit-border-radius: 3px;
+  	border-radius:         3px;
+  	float: right;
+  	background : rgb(219, 87, 103);
+	padding: 0 6px;
+	margin-left: 15px;
+	margin-top: 3px;
+//  	color: white;
+	color: rgb(249, 227, 227);
+  	border: 1px solid rgba(140, 45, 140, 0.5);
+}
+
 .answer_content{
 	border: 1px solid rgba(0, 153, 204, 0.3);
 //	border-top: 1px solid rgba(0, 153, 204, 0.3);
@@ -617,4 +645,60 @@ background : rgba(200, 140, 205, 1);
 
 tbody tr, tr.even, td {
 	background-color: transparent;	
+}
+
+.hotel_info{
+//	display:block;
+	overflow:auto;
+	-moz-border-radius:    3px 3px 3px 3px;
+  	-webkit-border-radius: 3px 3px 3px 3px;
+  	border-radius:         3px 3px 3px 3px;
+	padding: 10px;
+}
+
+.address_phone{
+	display:block;
+	overflow:auto;
+}
+
+.address_phone ul li{
+	list-style-type: none;
+}
+
+.address{
+	float:left;
+	background-color: rgba(197, 199, 204, 0.3);
+	border: 1px solid rgba(0, 153, 204, 0.3);
+	-moz-border-radius:    3px 3px 3px 3px;
+  	-webkit-border-radius: 3px 3px 3px 3px;
+  	border-radius:         3px 3px 3px 3px;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.address ul,
+.phone ul{
+	margin: 0;
+	padding-left: 0;
+}
+
+.phone{
+	float: left;
+	background-color: rgba(197, 199, 204, 0.3);
+	border: 1px solid rgba(0, 153, 204, 0.3);
+	-moz-border-radius:    3px 3px 3px 3px;
+  	-webkit-border-radius: 3px 3px 3px 3px;
+  	border-radius:         3px 3px 3px 3px;
+	padding: 10px;
+}
+
+.website,
+.extra{
+	display:block;
+	padding: 10px;
+}
+
+.website p,
+.extra p{
+	margin: 0;
 }

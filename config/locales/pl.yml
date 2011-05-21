@@ -23,6 +23,14 @@ pl:
   you: "Wy"
   page_description: "êtes sur le site web qui donne toutes les informations sur le super mariage de Dagmara et Damien. Ici, vous avez la possibilité d'écrire un message qui sera affiché ci-dessous. N'hésitez pas, ça fait toujours plaisir !"
   thanks: "Dziękujemy"
+  price: "Prix chambre double"
+  distance: "Distance depuis \"La Barca\""
+  address: "Adresse"
+  website: "Page internet"
+  extra_info: "Informations supplémentaires"
+  where: "Gdzie"
+  to_sleep: "spać ?"
+  accomodation_description: "Ici, vous trouverez des possibilités d'hébergement. Il y a donc une liste d'hôtels plus ou moins loins et plus ou moins chers. "
   
   date:
     formats:

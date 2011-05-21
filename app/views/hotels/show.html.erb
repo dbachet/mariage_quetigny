@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hotel.name %>
+</p>
+
+<p>
+  <b>Address street:</b>
+  <%= @hotel.address_street %>
+</p>
+
+<p>
+  <b>Address city:</b>
+  <%= @hotel.address_city %>
+</p>
+
+<p>
+  <b>Address post code:</b>
+  <%= @hotel.address_post_code %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @hotel.website %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @hotel.email %>
+</p>
+
+<p>
+  <b>Distance to la barca:</b>
+  <%= number_to_human(@hotel.distance_to_la_barca, :units => {:unit => "m", :thousand => "km"}) %>
+</p>
+
+<p>
+  <b>Double room price:</b>
+  <%= number_to_human(@hotel.double_room_price, :units => {:unit => "€"}) %>
+</p>
+
+<p>
+  <b>Phone nr:</b>
+  <%= @hotel.phone_nr %>
+</p>
+
+<p>
+  <b>Fax nr:</b>
+  <%= @hotel.fax_nr %>
+</p>
+
+<p>
+  <b>Extra description:</b>
+  <%= @hotel.extra_description %>
+</p>
+
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
