@@ -6,15 +6,11 @@
 #  - Tsutomu Kuroda - http://github.com/kuroda (t-kuroda@oiax.jp)
 
 fr:
-  home: Accueil
-  accomodation: "Hébergement - Où dormir ?"
+  home: "Accueil"
+  accomodation: "Hébergement"
   program: "Programme"
-  contact: "Contact - Écrivez-nous !"
+  contact: "Contact"
   website_title: "Le 16 juillet 2011, Dagmara et Damien se marient à Quetigny"
-  home_title: "Accueil"
-  accomodation_title: "Hébergement - Où dormir ?"
-  contact_title: "Contact - Écrivez-nous !"
-  program_title: "Programme"
   hello_flash: "Ah ben vous voilà !"
   description_left: "Ici, il y aura du texte, mais il est pas encore là..."
   write_new_message: "Écrire un nouveau message"
@@ -27,6 +23,9 @@ fr:
   by: "de"
   answer: "Réponse"
   save_answer: "Enregistrer la réponse"
+  you: "Vous"
+  page_description: "êtes sur le site web qui donne toutes les informations sur le super mariage de Dagmara et Damien. Ici, vous avez la possibilité d'écrire un message qui sera affiché ci-dessous. N'hésitez pas, ça fait toujours plaisir !"
+  thanks: "Merci"
   
   
   date:

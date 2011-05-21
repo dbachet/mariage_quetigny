@@ -8,10 +8,6 @@ pl:
   program: "Program"
   contact: "Kontakt"
   website_title: "W dniu 16 lipca 2011 r., Dagmara i Damien pobierają się w Quetigny"
-  home_title: "Strona główna"
-  accomodation_title: "Zakwaterowanie - Gdzie spać?"
-  contact_title: "Kontakt - Napisz do nas!"
-  program_title: "Plan"
   hello_flash: "Nareszcie jesteś!"
   description_left: "Tu będzie opis, ale narazie go nie ma..."
   write_new_message: "Napisz nową wiadomość"
@@ -24,6 +20,9 @@ pl:
   by: "od"
   answer: "Odpowiedź"
   save_answer: "Zapisz odpowiedź"
+  you: "Wy"
+  page_description: "êtes sur le site web qui donne toutes les informations sur le super mariage de Dagmara et Damien. Ici, vous avez la possibilité d'écrire un message qui sera affiché ci-dessous. N'hésitez pas, ça fait toujours plaisir !"
+  thanks: "Dziękujemy"
   
   date:
     formats:
