@@ -39,7 +39,7 @@
 				<td><%= f.text_field :title %></td>
 			</tr>
 			<tr>
-				<td><%= t("message") %></td>
+				<td><%= t("text") %></td>
 				<td><%= f.text_area :content %></td>
 			</tr>
 			<tr>
@@ -78,7 +78,7 @@
 		<div class="answer_author">
 			<h2><%= post_answer.created_at.strftime("%d") %>.<%= post_answer.created_at.strftime("%m") %></h2>
 				<h2><strong><%= post_answer.created_at.strftime("%Y") %></strong></h2>
-				 by <p><strong><%= post_answer.username %></strong></p>
+				 <%= t("by") %> <p><strong><%= post_answer.username %></strong></p>
 			<div class="answer_tag"><%= t("answer") %></div>
 		</div>
 		<div class="answer_content"><%= post_answer.content %>
