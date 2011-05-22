@@ -1,6 +1,6 @@
 class MariageController < ApplicationController
   def home
-	@posts = Post.all
+	@posts = Post.order("created_at DESC")
 	@post = Post.new
 	@post_answer = PostAnswer.new
   end
