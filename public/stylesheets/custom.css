@@ -3,6 +3,8 @@ html, body{
 	margin : 0;
 	height : 100%;
 	width : 100%
+	background-color: transparent;
+	color: black;
 }
  
 body{
@@ -125,7 +127,7 @@ footer p{
 }
 
 nav{
-/* display: inline-block; */
+// display: inline-block; 
 	float: right;
 //	background-color: rgba(0, 153, 204, 0.3);
 //	border: 1px solid rgba(0, 153, 204, 0.3);
@@ -137,20 +139,7 @@ nav{
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.7);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.7);
 	box-shadow: 0 1px 2px rgba(0,0,0,.7);
-//	background-image: -webkit-gradient(
-//    linear,
-//    left bottom,
-//    left top,
-//    color-stop(0.02, rgb(188,181,229)),
-//    color-stop(0.49, rgb(212,142,209)),
-//    color-stop(0.95, rgb(187,180,229))
-//);
-//background-image: -moz-linear-gradient(
-//    center bottom,
-//    rgb(188,181,229) 2%,
-//    rgb(212,142,209) 49%,
-//    rgb(187,180,229) 95%
-//);
+background: rgb(197, 134, 206);
 background-image: -webkit-gradient(
     linear,
      bottom,
@@ -159,6 +148,7 @@ background-image: -webkit-gradient(
     color-stop(0.77, rgb(208,156,224)),
     color-stop(0.94, rgb(215,174,224))
 );
+
 background-image: -moz-linear-gradient(
     center bottom,
     rgb(186,65,219) 4%,
